@@ -9,15 +9,8 @@ export default function NotFound() {
 
   useEffect(() => {
     console.log('not_found');
-    
-    if (posthog) {  
-      console.log('posthog', posthog);
-      posthog.capture('not_found');
-    } else {
-      console.log('no posthog');
-    }
+    posthog.capture('not_found');
   }, []);
-
 
   return (
     <div className="container py-28">
